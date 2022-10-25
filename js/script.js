@@ -1,13 +1,23 @@
-alert ("Para ingresar debe registrarse");
-let cliente = prompt ("Ingrese su nombre");
-alert ("Bienvenido/a " + cliente + " a nuestro concesionario");
+let ingreso = prompt ("Ingrese su nombre");
+let bienvenida = "Bienvenido/a al concesionario " + ingreso;
+alert (bienvenida);
+
+let edadPersona = prompt ("Ingrese su edad")
+let edadComprar = 18;
+if (edadPersona < edadComprar){
+    alert ("No podes comprar un vehiculo");
+}
+else{ (edadPersona >= edadComprar)
+    alert ("Podes comprar un vehiculo");
+}
 
 let categoriaVeh = prompt ("Ingrese la categoria de vehiculo que busca");
-if (categoriaVeh == "auto"){
+if (categoriaVeh == "auto" , "Auto" , "AUTO"){
     alert ("La categoria seleccionada es auto")
 } else{
     alert ("Categoria no disponible")
 }
+
 let opcion = prompt ("¿Que marca de auto esta buscando?: \n1- Volkswagen \n2- Chevrolet \n3- Toyota");
 switch (opcion){
     case "1":
@@ -52,5 +62,35 @@ console.log (toyota);
 console.log (audi);
 console.log (nissan);
 
-let despedida = "Gracias por elegirnos"
-console.log (despedida.toUpperCase());
+document.getElementsById("Nombre").value = "";
+document.getElementsById("Apellido").value = "";
+document.getElementsById("Email").value = "";
+document.getElementsById("Contraseña").value = "";
+
+let boton =
+document.getElementById("btnPrincipal")
+    boton.addEventListener("click", despedida)
+function despedida (){
+    alert ("Gracias por su visita")
+}
+
+let nombreUsuario = document.getElementById ("name");
+let btnPrincipal = document.getElementById ("btnPrincipal");
+btnPrincipal.addEventListener("click", ()=>{
+    localStorage.setItem("nombre", nombreUsuario.value);
+})
+
+let apellidoUsuario = document.getElementById ("apell");
+btnPrincipal.addEventListener("click", ()=>{
+    localStorage.setItem("apellido", apellidoUsuario.value);
+})
+
+let emailUsuario = document.getElementById ("email");
+btnPrincipal.addEventListener("click", ()=>{
+    localStorage.setItem("email", emailUsuario.value);
+})
+
+let contaseñaUsuario = document.getElementById ("password");
+btnPrincipal.addEventListener("click", ()=>{
+    localStorage.setItem("contraseña", contraseñaUsuario.value);
+})
