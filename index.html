@@ -4,56 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concesionario</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Proyecto JS</title>
 </head>
 <body>
-    <header class="cabecera">
-        <h1 class="titulo">Concesionario D'Amico</h1>
-        <div>
-            <nav>
-                <ul>
-                    <a href="./index.html">inicio</a>
-                    <a href="./pages/p1.html">p1</a>
-                    <a href="./pages/p2.html">p2</a>
-                    <a href="./pages/p3.html">p3</a>
-                    <a href="./pages/p4.html">p4</a>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <h1 id="titulo" class="titulo">Concesionario Damico</h1>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
     </header>
 
-    <main>
-
-        <form action="">
-            <input type ="text" id="name" placeholder="Nombre" required>
-            <input type ="text" id="apell" placeholder="Apellido" required>
-            <input type ="email" name="" id="email" placeholder="Email" required>
-            <input type ="password" name="" id="password" placeholder="Contraseña" required>
-            <input type="submit" id="btnPincipal" value="Enviar">
-        </form>
+    <main id="contenedor-productos">
 
     </main>
 
-    <section>
-
-    </section>
-
-    <footer>
-
-    </footer>
-    
-
-
-
-
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+    </div>
 
 
-
-
-
-
-
-<script src="./js/script.js"></script>
+    <script defer src="./js/stock.js"></script>
+    <script defer src="./js/modal.js"></script>
+    <script defer src="./js/app.js"></script>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
 </body>
 </html>
